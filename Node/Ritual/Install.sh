@@ -22,14 +22,6 @@ else
 fi
 REGISTRY_ADDRESS=0x3B1554f346DFe5c482Bb4BA31b880c1C18412170
 
-echo "Устанавливаем необходимое ПО"
-echo "Обновляю пакеты, пожалуйста подождите....."
-bash <(curl -s https://raw.githubusercontent.com/blackcat-team/kuznica/refs/heads/main/main%20install) &>/dev/null
-echo "Обновление успешно завершено."
-echo "Устанавливаю Docker, пожалуйста, подождите..."
-bash <(curl -s https://raw.githubusercontent.com/blackcat-team/kuznica/refs/heads/main/docker%20install) &>/dev/null
-echo "Необходимое ПО установлено, продолжаем установку ноды"
-
 # Клонирование репозитория (шаг 5 оф. гайда)
 cd $HOME
 git clone https://github.com/ritual-net/infernet-container-starter && cd infernet-container-starter
