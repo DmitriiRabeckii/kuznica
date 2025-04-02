@@ -20,7 +20,7 @@ else
     echo "Private key введен не верно, должен начинаться с 0х"
     exit 1
 fi
-REGISTRY_ADDRESS=0x3B1554f346DFe5c482Bb4BA31b880c1C18412170
+REGISTRY_ADDRESS=0x8D871Ef2826ac9001fB2e33fDD6379b6aaBF449c
 
 # Клонирование репозитория (шаг 5 оф. гайда)
 cd $HOME
@@ -54,7 +54,7 @@ sed -i 's|sender := .*|sender := '"$PRIVATE_KEY"'|' "$MAKEFILE"
 sed -i 's|RPC_URL := .*|RPC_URL := '"$RPC_URL"'|' "$MAKEFILE"
 
 #script/Deploy.s.sol
-sed -i 's|address registry = .*|address registry = 0x3B1554f346DFe5c482Bb4BA31b880c1C18412170;|' "$HOME/infernet-container-starter/projects/hello-world/contracts/script/Deploy.s.sol"
+sed -i 's|address registry = .*|address registry = 0x8D871Ef2826ac9001fB2e33fDD6379b6aaBF449c;|' "$HOME/infernet-container-starter/projects/hello-world/contracts/script/Deploy.s.sol"
 
 #Инициализируем новую конфигурацию
 sed -i 's|ritualnetwork/infernet-node:1.0.0|ritualnetwork/infernet-node:1.2.0|' $HOME/infernet-container-starter/deploy/docker-compose.yaml
